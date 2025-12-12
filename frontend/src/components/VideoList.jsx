@@ -12,8 +12,11 @@ const VideoList = () => {
   }, []);
 
   const handlePlay = (filename) => {
-    // Considera que o NAS serve os vídeos via http://192.168.1.4/videos/...
-    setSelected(`http://192.168.1.4/UniversidadeNutrihouse/DOMANA/CDP`);
+    // Considera que o NAS serve os vídeos via URL base configurável.
+    // Ex.: REACT_APP_VIDEO_BASE_URL=http://192.168.1.4/videos
+    const base = process.env.REACT_APP_VIDEO_BASE_URL || "http://192.168.1.4";
+    const safeName = encodeURIComponent(filename);
+    setSelected(`${base}/${safeName}`);
   };
 
   return (

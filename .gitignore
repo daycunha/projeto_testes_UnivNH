@@ -1,6 +1,11 @@
 # Node modules
 node_modules/
 
+# Coverage (evidências geradas automaticamente)
+coverage/
+frontend/coverage/
+backend/coverage/
+
 # Cache folders
 .cache/
 

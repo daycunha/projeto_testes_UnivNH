@@ -5,8 +5,10 @@ import iconMilvus from "../assets/icons_cards/icon_milvus.png";
 import iconProtheus from "../assets/icons_cards/icon_protheus.png";
 import iconTeknisa from "../assets/icons_cards/icon_teknisa.png";
 import iconIA from "../assets/icons_cards/icon_IA.png";
-import iconFormacaoLid from "../assets/icons_cards/icon_lideranca.png";
-import iconSmark from "../assets/icons_cards/icon_smark2.png";
+// Ícones abaixo estavam referenciando arquivos inexistentes no repositório.
+// Para evitar falhas de build/test, reutilizamos ícones existentes.
+const iconFormacaoLid = iconIA;
+const iconSmark = iconMilvus;
 
 
 const carouselData = [

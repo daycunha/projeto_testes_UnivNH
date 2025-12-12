@@ -17,11 +17,21 @@ const Login = () => {
     setLoading(true);
 
     try {
+      const usuario = userDN.trim();
+      if (!usuario) {
+        setError("Usuário obrigatório");
+        return;
+      }
+      if (!password) {
+        setError("Senha obrigatória");
+        return;
+      }
+
       const response = await fetch("http://localhost:5000/authenticate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          userDN: `${userDN}@nutrihouse.intra`,
+          userDN: `${usuario}@nutrihouse.intra`,
           password,
         }),
       });

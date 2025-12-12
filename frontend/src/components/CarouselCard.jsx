@@ -6,6 +6,7 @@ const CarouselCard = ({ id, title, icon, onClick }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
+    if (typeof onClick === "function") return onClick();
     navigate(`/video/${id}`);
   };
 

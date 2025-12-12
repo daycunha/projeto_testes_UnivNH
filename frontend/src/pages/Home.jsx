@@ -35,7 +35,7 @@ const Home = () => {
 
   const handleCardClick = (id) => {
     console.log("Clicou no card:", id);
-    navigate(`/videos/${id}`);
+    navigate(`/video/${id}`);
   };
 
   return (
